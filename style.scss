@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 150%;
+}
+
+body {
+    font-family: 'lato', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #ead6ee, #a0f1ea);
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+.operator {
+    background: rgb(190, 185, 185);
+}
+
+.operator, .number {
+    cursor: pointer;
+}
+
+.calculator {
+    width: 400px;
+    height: 400px;
+    background: #191825;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    form {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        gap: 1px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+        "d1 d1 d1 d1"
+        "d2 d2 d2 d2"
+        "p m t divide"
+        "s h n delete"
+        "f v x e"
+        "o w th e"
+        "z period c e"
+        ;
+        .display {
+            padding: 0 1em;
+            background: #191825;
+            color: whitesmoke;
+            -webkit-border-radius: 10px 10px 0 0;
+            -moz-border-radius: 10px 10px 0 0;
+            -ms-border-radius: 10px 10px 0 0;
+            -o-border-radius: 10px 10px 0 0;
+            border-radius: 10px 10px 0 0;
+        }
+        .display_1 {
+            text-align: start;
+            grid-area: d1;
+        }
+        .display_2 {
+            text-align: end;
+            grid-area: d2;
+        }
+        .delete {
+            grid-area: delete;
+        }
+        .plus {
+            grid-area: p;
+        }
+        .minus {
+            grid-area: m;
+        }
+        .times {
+            grid-area: t;
+        }
+        .divide {
+            grid-area: divide;
+        }
+        .equal {
+            grid-area: e;
+            background: rgb(201, 57, 13);
+            -webkit-border-radius: 0 0 10px 0;
+            -moz-border-radius: 0 0 10px 0;
+            -ms-border-radius: 0 0 10px 0;
+            -o-border-radius: 0 0 10px 0;
+            border-radius: 0 0 10px 0;
+            }
+        .seven {
+            grid-area: s;
+        }
+        .eight {
+            grid-area: h;
+        }
+        .nine {
+            grid-area: n;
+        }
+        .four {
+            grid-area: f;
+        }
+        .five {
+            grid-area: v;
+        }
+        .six {
+            grid-area: x;
+        }
+        .one {
+            grid-area: o;
+        }
+        .two {
+            grid-area: w;
+        }
+        .three {
+            grid-area: th;
+        }
+        .zero {
+            grid-area: z;
+            -webkit-border-radius: 0 0 0 10px;
+            -moz-border-radius: 0 0 0 10px;
+            -ms-border-radius: 0 0 0 10px;
+            -o-border-radius: 0 0 0 10px;
+            border-radius: 0 0 0 10px;
+        }
+        .decimal {
+            grid-area: period;
+        }
+        .clear {
+            grid-area: c;
+        }
+    }
+}

@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 150%;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #ead6ee, #a0f1ea);
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.operator {
+  background: rgb(190, 185, 185);
+}
+
+.operator, .number {
+  cursor: pointer;
+}
+
+.calculator {
+  width: 400px;
+  height: 400px;
+  background: #191825;
+  border-radius: 10px;
+}
+.calculator form {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "d1 d1 d1 d1" "d2 d2 d2 d2" "p m t divide" "s h n delete" "f v x e" "o w th e" "z period c e";
+}
+.calculator form .display {
+  padding: 0 1em;
+  background: #191825;
+  color: whitesmoke;
+  border-radius: 10px 10px 0 0;
+}
+.calculator form .display_1 {
+  text-align: start;
+  grid-area: d1;
+}
+.calculator form .display_2 {
+  text-align: end;
+  grid-area: d2;
+}
+.calculator form .delete {
+  grid-area: delete;
+}
+.calculator form .plus {
+  grid-area: p;
+}
+.calculator form .minus {
+  grid-area: m;
+}
+.calculator form .times {
+  grid-area: t;
+}
+.calculator form .divide {
+  grid-area: divide;
+}
+.calculator form .equal {
+  grid-area: e;
+  background: rgb(201, 57, 13);
+  border-radius: 0 0 10px 0;
+}
+.calculator form .seven {
+  grid-area: s;
+}
+.calculator form .eight {
+  grid-area: h;
+}
+.calculator form .nine {
+  grid-area: n;
+}
+.calculator form .four {
+  grid-area: f;
+}
+.calculator form .five {
+  grid-area: v;
+}
+.calculator form .six {
+  grid-area: x;
+}
+.calculator form .one {
+  grid-area: o;
+}
+.calculator form .two {
+  grid-area: w;
+}
+.calculator form .three {
+  grid-area: th;
+}
+.calculator form .zero {
+  grid-area: z;
+  border-radius: 0 0 0 10px;
+}
+.calculator form .decimal {
+  grid-area: period;
+}
+.calculator form .clear {
+  grid-area: c;
+}/*# sourceMappingURL=style.css.map */
